@@ -19,6 +19,7 @@ header{
     height: 5rem;
     // border-bottom: 1px solid black;
     // padding: 1rem 0;
+    z-index: 1000000;
     .bars{
         display: none;
     }
@@ -274,5 +275,122 @@ footer{
     div{
         text-align: center;
         padding-top: .7rem;
+    }
+}
+
+
+
+.cartsModal{
+    z-index: 999999999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .5);
+    position: fixed;
+    top: 0;
+    display: none;
+    .cart{
+        background-color: white;
+        width: 50%;
+        margin: 5rem auto;
+        height: 80%;
+        position: relative;
+        .title{
+            list-style-type: none;
+            display: flex;
+            border-bottom: 2px solid black;
+            li{
+                text-align: center;
+                font-size: 1.1rem;
+                margin: 1rem 0;
+            }
+            li:first-child{
+                width: 20%;
+            }
+            li:nth-child(2){
+                width: 30%;
+            }
+            li:nth-child(3){
+                width: 15%;
+            }
+            li:nth-child(4){
+                width: 15%;
+            }
+            li:last-child{
+                width: 19%;
+            }
+        }
+        .contentProducts{
+            overflow: auto;
+            height: 34.2rem;
+            ul{
+                list-style-type: none;
+                display: flex;
+                li{
+                    text-align: center;
+                    font-size: 1.1rem;
+                    margin: .5rem 0;
+                }
+                li:first-child{
+                    width: 20%;
+                    height: 6rem;
+                    position: relative;
+                    .image{
+                        width: 55%;
+                        height: 95%;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .close{
+                        position: absolute;
+                        top: 35%;
+                        left: 7%;
+                    }
+                }
+                li:nth-child(2){
+                    width: 30%;
+                    line-height: 5.5rem;
+                }
+                li:nth-child(3){
+                    width: 15%;
+                    line-height: 5.5rem;
+                    input{
+                        background-color: #f2f2f2;
+                        width: 50%;
+                        height: 30%;
+                        font-size: 1.1rem;
+                        // color: #cccc;
+                        padding-left: .7rem;
+                        margin: 0 auto;
+                    }
+                }
+                li:nth-child(4){
+                    width: 15%;
+                    line-height: 5.5rem;
+                }
+                li:last-child{
+                    width: 20%;
+                    line-height: 5.5rem;
+                    input{
+                        background-color: #e6e6e6;
+                        width: 90%;
+                        margin: 0 auto;
+                        height: 40%;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .closeCarts{
+            cursor: pointer;
+            position: absolute;
+            top: .8%;
+            right: 1.3%;
+            font-size: 1.2rem;
+        }
     }
 }

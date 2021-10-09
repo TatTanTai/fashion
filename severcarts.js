@@ -1,23 +1,39 @@
-const productsAPi = "  http://localhost:3000/products";
+const productsAPi = "http://localhost:3000/products";
+
+const buyApi = "  http://localhost:3000/buyProducts/";
 
 function start() {
     let addCart = document.querySelectorAll('.addCarts');
     for(let i = 0; i < addCart.length; i++){
         addCart[i].classList.add(`cart${i+1}`)
     }
+
     let products = document.querySelectorAll('.product');
     for(let i = 0; i < products.length; i++){
         products[i].classList.add(`product${i+1}`)
     }
 
+
+
     getCarts(showCarts);
 
-    // closeCartss(id);
+    // closeCarts();
 
     handlCreate();
+
+    handlBuyProduct();
+
 }
 
 start();
+
+function getBuyProduct(callback) {
+    fetch(productsAPi)
+        .then(function(res) {
+            return res.json();
+        })
+        .then(callback);
+}
 
 
 function getCarts(callback) {
@@ -49,6 +65,7 @@ function closeCarts(id) {
 
 
 
+
 function pushCarts(data, callback) {
     let opsion = {
         method: 'POST',
@@ -65,9 +82,56 @@ function pushCarts(data, callback) {
 }
 
 
+function pushBuy(data, callback) {
+    let option = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    fetch(buyApi, option)
+        .then((res) => {
+            res.json();
+        })
+        .then(callback);
+}
+
+
+function handlBuyProduct() {
+        let buy = document.querySelectorAll('.btnBuy');
+        for(let i = 0; i < buy.length; i++) {
+            let btnBuy = buy[i];
+            btnBuy.onclick = () => {
+                let product = document.querySelector(`.product${i+1}`);
+                let nameProduct = product.querySelector('h3').textContent;
+                let priceProduct = product.querySelector('p').textContent;
+                let handlPrice = parseInt(priceProduct.replace('đ', ''));
+                let imgProduct = product.querySelector('img').src;
+                let formData = {
+                    name: nameProduct,
+                    price: priceProduct,
+                    priceMath: handlPrice,
+                    img: imgProduct,
+                }
+                pushBuy(formData);
+        }
+    }
+}
+
+
+
+
+
+
 function showCarts(carts) {
     let contentCart = document.querySelector('.contentProducts');
-    let htmlCarts = carts.map((cart) => {
+    console.log(carts[carts.length-1])
+    for(let i = 0; i < carts.length; i++) {
+        // console.log(carts[carts.length-1])
+    }
+    let htmlCarts = carts.map((cart, index) => {
         return `
             <ul class="ul${cart.id}">
                 <li>
@@ -85,7 +149,10 @@ function showCarts(carts) {
 }
 
 
-function handlCreate(){
+
+
+
+function handlCreate(id){
     let addCart = document.querySelectorAll('.addCarts');
     for(let i = 0; i < addCart.length; i++){
         let btnPush = document.querySelector(`.cart${i+1}`);

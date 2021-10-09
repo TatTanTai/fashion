@@ -72,6 +72,31 @@ $(document).ready(function() {
         });
     }
 
+    $('.closeCarts').click(() => {
+        $('.cartsModal').hide();
+        console.log('hello')
+    });
+
+    $('.carts').click(() => {
+        $('.cartsModal').show();
+    });
+
+    $(window).scroll(() => {
+        if($(this).scrollTop() >= 150){
+            $('header').css({
+                "position": "fixed",
+                "top": 0,
+                "right": 0,
+                "left": 0,
+            });
+        }
+        else{
+            $('header').css({
+                "position": "static",
+            });
+        }
+    });
+
 })
 
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass --watch t_shirt.scss t_shirt.css",
+    "watch": "node-sass --watch buy.scss buy.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
