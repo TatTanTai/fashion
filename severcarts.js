@@ -127,9 +127,7 @@ function handlBuyProduct() {
 
 function showCarts(carts) {
     let contentCart = document.querySelector('.contentProducts');
-    console.log(carts[carts.length-1])
     for(let i = 0; i < carts.length; i++) {
-        // console.log(carts[carts.length-1])
     }
     let htmlCarts = carts.map((cart, index) => {
         return `

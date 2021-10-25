@@ -60,7 +60,34 @@ $(document).ready(() => {
         $('.slide' + i).mouseleave(function() {
             $('.description' + i).slideUp();
         });
+  }
+
+  $('.closeCarts').click(() => {
+    $('.cartsModal').hide();
+      console.log('hello')
+  });
+
+  $('.carts').click(() => {
+    $('.cartsModal').show();
+  });
+
+  $(window).scroll(() => {
+    if($(this).scrollTop() >= 150){
+        $('header').css({
+            "position": "fixed",
+            "top": 0,
+            "right": 0,
+            "left": 0,
+            "border-bottom": "1px solid black",
+        });
     }
+    else{
+        $('header').css({
+            "position": "static",
+            "border-bottom": "none",
+        });
+    }
+  });
 })
 
 

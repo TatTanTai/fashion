@@ -64,9 +64,15 @@ header {
         padding: .4rem .5rem .3rem .7rem;
         border-radius: 4px; }
     header .search-carts .carts {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-left: 10%;
-      width: 25%; }
+      width: 25%;
+      position: relative; }
+      header .search-carts .carts .number {
+        font-size: .7rem;
+        position: absolute;
+        top: 11%;
+        left: 20%; }
 
 .body {
   border-top: 1px solid black; }
@@ -177,6 +183,15 @@ header {
           text-decoration: line-through;
           color: #8888;
           margin-right: .5rem; }
+    .body .productsRelate .content .slide .addCarts {
+      position: absolute;
+      top: 3%;
+      right: 4%;
+      font-size: 1.2rem;
+      cursor: pointer; }
+    .body .productsRelate .content .slide .addCarts:hover {
+      transform: rotate(360deg);
+      transition: ease 1.5s; }
 
 footer {
   width: 100%;
@@ -246,3 +261,94 @@ footer {
   .end div {
     text-align: center;
     padding-top: .7rem; }
+
+.cartsModal {
+  z-index: 999999999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  display: none; }
+  .cartsModal .cart {
+    background-color: white;
+    width: 50%;
+    margin: 5rem auto;
+    height: 80%;
+    position: relative; }
+    .cartsModal .cart .title {
+      list-style-type: none;
+      display: flex;
+      border-bottom: 2px solid black; }
+      .cartsModal .cart .title li {
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 1rem 0; }
+      .cartsModal .cart .title li:first-child {
+        width: 20%; }
+      .cartsModal .cart .title li:nth-child(2) {
+        width: 30%; }
+      .cartsModal .cart .title li:nth-child(3) {
+        width: 15%; }
+      .cartsModal .cart .title li:nth-child(4) {
+        width: 15%; }
+      .cartsModal .cart .title li:last-child {
+        width: 19%; }
+    .cartsModal .cart .contentProducts {
+      overflow: auto;
+      height: 34.2rem; }
+      .cartsModal .cart .contentProducts ul {
+        list-style-type: none;
+        display: flex; }
+        .cartsModal .cart .contentProducts ul li {
+          text-align: center;
+          font-size: 1.1rem;
+          margin: .5rem 0; }
+        .cartsModal .cart .contentProducts ul li:first-child {
+          width: 20%;
+          height: 6rem;
+          position: relative; }
+          .cartsModal .cart .contentProducts ul li:first-child .image {
+            width: 55%;
+            height: 95%;
+            margin: 0 auto; }
+            .cartsModal .cart .contentProducts ul li:first-child .image img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
+          .cartsModal .cart .contentProducts ul li:first-child .close {
+            position: absolute;
+            top: 35%;
+            left: 7%; }
+        .cartsModal .cart .contentProducts ul li:nth-child(2) {
+          width: 30%;
+          line-height: 5.5rem; }
+        .cartsModal .cart .contentProducts ul li:nth-child(3) {
+          width: 15%;
+          line-height: 5.5rem; }
+          .cartsModal .cart .contentProducts ul li:nth-child(3) input {
+            background-color: #f2f2f2;
+            width: 50%;
+            height: 30%;
+            font-size: 1.1rem;
+            padding-left: .7rem;
+            margin: 0 auto; }
+        .cartsModal .cart .contentProducts ul li:nth-child(4) {
+          width: 15%;
+          line-height: 5.5rem; }
+        .cartsModal .cart .contentProducts ul li:last-child {
+          width: 20%;
+          line-height: 5.5rem; }
+          .cartsModal .cart .contentProducts ul li:last-child input {
+            background-color: #e6e6e6;
+            width: 90%;
+            margin: 0 auto;
+            height: 40%;
+            border-radius: 5px;
+            cursor: pointer; }
+    .cartsModal .cart .closeCarts {
+      cursor: pointer;
+      position: absolute;
+      top: .8%;
+      right: 1.3%;
+      font-size: 1.2rem; }

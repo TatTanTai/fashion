@@ -92,9 +92,16 @@ header{
             }
         }
         .carts{
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-left: 10%;
             width: 25%;
+            position: relative;
+            .number{
+                font-size: .7rem;
+                position: absolute;
+                top: 11%;
+                left: 20%;
+            }
         }
     }
 }

@@ -6,28 +6,17 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
-    // height: 1000vh;
 }
 
-// html{
-//     height: 1000%;
-// }
 
 header{
     display: flex;
     background-color: white;
     height: 5rem;
-    // border-bottom: 1px solid black;
-    // padding: 1rem 0;
     z-index: 1000000;
-    .bars{
-        display: none;
-    }
     .logo{
         margin-left: 7%;
         width: 15%;
-        // text-align: center;
-        // margin-top: 1rem;
         div{
             padding: .5rem 0;
             margin: 0 auto;
@@ -92,11 +81,33 @@ header{
             }
         }
         .carts{
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-left: 10%;
             width: 25%;
+            position: relative;
+            .number{
+                font-size: .7rem;
+                position: absolute;
+                top: 11%;
+                left: 20%;
+            }
         }
     }
+}
+.headerPhone{
+    display: none;
+    
+    .bars{
+        width: 10%;
+        margin-right: 60%;
+    }
+    .search-carts{
+        width: 30%;
+    }
+}
+
+.menuPhone{
+    display: none;
 }
 
 
@@ -143,9 +154,10 @@ body{
         .slide{
             margin-top: 2rem;
             position: relative;
+            height: 23rem;
             img{
                 width: 100%;
-                height: 25rem;
+                height: 100%;
                 object-fit: cover;
                 box-shadow: 0px 0px 10px 3px #e6e6e6;
             }

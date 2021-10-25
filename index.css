@@ -11,8 +11,6 @@ header {
   background-color: white;
   height: 5rem;
   z-index: 1000000; }
-  header .bars {
-    display: none; }
   header .logo {
     margin-left: 7%;
     width: 15%; }
@@ -64,9 +62,26 @@ header {
         padding: .4rem .5rem .3rem .7rem;
         border-radius: 4px; }
     header .search-carts .carts {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-left: 10%;
-      width: 25%; }
+      width: 25%;
+      position: relative; }
+      header .search-carts .carts .number {
+        font-size: .7rem;
+        position: absolute;
+        top: 11%;
+        left: 20%; }
+
+.headerPhone {
+  display: none; }
+  .headerPhone .bars {
+    width: 10%;
+    margin-right: 60%; }
+  .headerPhone .search-carts {
+    width: 30%; }
+
+.menuPhone {
+  display: none; }
 
 body .backgroundMarket {
   width: 100%;
@@ -102,10 +117,11 @@ body .productSale .title::after {
 
 body .productSale .slide {
   margin-top: 2rem;
-  position: relative; }
+  position: relative;
+  height: 23rem; }
   body .productSale .slide img {
     width: 100%;
-    height: 25rem;
+    height: 100%;
     object-fit: cover;
     box-shadow: 0px 0px 10px 3px #e6e6e6; }
   body .productSale .slide .description {
