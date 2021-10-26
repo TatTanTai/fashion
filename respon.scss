@@ -250,7 +250,23 @@
     body .backgroundMarket{
         height: 25vh;
     }
+    .menuPhone{
+        top: 17.5%;
+    }
     .end {
         font-size: .8rem;
+    }
+    .headerPhone .iconPhone .search-cartss .carts{
+        margin-left: 12%;
+    }
+    .headerPhone .iconPhone .search-cartss .carts .number{
+        left: 80%;
+        top: 16%;
+    }
+    body .productSale .slide{
+        height: 13rem;
+    }
+    body .productSale .slide img{
+        height: 100%;
     }
 }
