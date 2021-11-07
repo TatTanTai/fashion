@@ -75,6 +75,9 @@ header {
         top: 11%;
         left: 20%; }
 
+.headerPhone, .menuPhone, .mapPhone {
+  display: none; }
+
 .body .goBackHome {
   position: relative; }
   .body .goBackHome div {

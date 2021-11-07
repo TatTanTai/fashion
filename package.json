@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass --watch respon.scss respon.css",
+    "watch": "node-sass --watch responMenu.scss responMenu.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

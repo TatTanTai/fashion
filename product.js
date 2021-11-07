@@ -45,9 +45,30 @@ $(document).ready(() => {
                 "right": 0,
                 "left": 0,
             });
+            $('.headerPhone').css({
+                "position": "fixed",
+                "top": 0,
+                "right": 0,
+                "left": 0,
+            });
+            const withPhone = document.querySelector('body');
+            if(withPhone.offsetWidth <= 400){
+                $('.menuPhone').css({
+                    "top": "16%",
+                });
+            }
+            else{
+                $('.menuPhone').css({
+                    "top": "19%"
+                });
+            }
+        
         }
         else{
             $('header').css({
+                "position": "static",
+            });
+            $('.headerPhone').css({
                 "position": "static",
             });
         }
@@ -76,7 +97,10 @@ $(document).ready(() => {
         $('.cartsModal').show();
     });
 
-
+    $('.bars').click(() => {
+        $('.menuPhone').slideToggle();
+    });
 });
+
 
 
